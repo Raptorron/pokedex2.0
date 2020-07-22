@@ -7,19 +7,19 @@ const syncAndSeed = async () => {
 
   const pokemons = [
     {
-      name: "Bulbasaure"
+      name: "Bulbasaure", type1: 'GRASS', type2: 'POISON', image: 'https://cws.auburn.edu/shared/Assets/Images/no-picture-available-yet.png'
     },
     {
-      name: "Charmander"
+      name: "Charmander", type1: 'FIRE', type2: 'NONE', image: 'https://cws.auburn.edu/shared/Assets/Images/no-picture-available-yet.png'
     },
     {
-      name: "Squirtel"
+      name: "Squirtle", type1: 'WATER', type2: 'NONE', image: 'https://cws.auburn.edu/shared/Assets/Images/no-picture-available-yet.png'
     },
     {
-      name: "Pikachu"
+      name: "Pikachu", type1: 'ELECTRIC', type2: 'NONE', image: 'https://cws.auburn.edu/shared/Assets/Images/no-picture-available-yet.png'
     },
     {
-      name: "Mewtwo"
+      name: "Mewtwo", type1: 'PSYCHIC', type2: 'NONE', image: 'https://cws.auburn.edu/shared/Assets/Images/no-picture-available-yet.png'
     }
   ]
   const [Bulbasaure, Charmander, Squirtel, Pikachu, Mewtwo] = await Promise.all(pokemons.map(pokemon => Pokemon.create(pokemon)));

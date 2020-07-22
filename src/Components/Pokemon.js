@@ -5,13 +5,19 @@ import { connect } from 'react-redux';
 const _Pokemons = ({pokemons}) => {
   return (
     <div>
-      <ul>
+      <div className='ordering' >
         {
-          pokemons.map( pokemon => <li key={pokemon.id}>
+          pokemons.map( pokemon => <div key={pokemon.id} className='spacing' >
+            <img src={pokemon.image} width='100px' height='100px' />
+            <br/>
             {pokemon.name}
-          </li>)
+            <br/>
+            Type 1: {pokemon.type1}
+            <br/>
+            Type 2: {pokemon.type2}
+          </div>)
         }
-      </ul>
+      </div>
     </div>
   )
 }

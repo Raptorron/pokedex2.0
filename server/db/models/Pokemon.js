@@ -10,8 +10,19 @@ const Pokemon = db.define('pokemon', {
   },
   name: {
     type: STRING,
-    allowNull: false
+    allowNull: false,
   },
+  type1: {
+    type: STRING,
+    allowNull: false,
+  },
+  type2: {
+    type: STRING,
+    allowNull: false,
+  },
+  image: {
+    type:STRING,
+  }
 });
 
 module.exports = Pokemon;
